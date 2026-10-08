@@ -9,6 +9,8 @@ env/
 # Byte-compiled / cache files
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
 # IDE / Editor settings
 .vscode/
