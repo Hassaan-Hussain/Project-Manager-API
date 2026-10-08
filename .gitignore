@@ -1,0 +1,19 @@
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# Sensitive environment variables
+.env
+
+# Byte-compiled / cache files
+__pycache__/
+*.pyc
+
+# IDE / Editor settings
+.vscode/
+.idea/
+
+# Database / OS files
+*.sqlite3
+.DS_Store
