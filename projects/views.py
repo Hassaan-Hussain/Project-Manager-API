@@ -58,6 +58,7 @@ class TaskViewSet(viewsets.ModelViewSet):
 class TeamMembershipViewSet(viewsets.ModelViewSet):
     queryset = TeamMembership.objects.all()
     serializer_class = TeamMembershipSerializer
+    
 
 
 class TaskAssignmentViewSet(viewsets.ModelViewSet):
