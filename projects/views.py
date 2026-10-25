@@ -51,14 +51,13 @@ class ProjectViewSet(viewsets.ModelViewSet):
 class TaskViewSet(viewsets.ModelViewSet):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
-    # this is main branch edit
-    # this is main branch edit2
-    # this is main branch edit3
+    
 
 class TeamMembershipViewSet(viewsets.ModelViewSet):
     queryset = TeamMembership.objects.all()
     serializer_class = TeamMembershipSerializer
-    
+    # comment for new commit in feature branch
+    #2 comment for new commit in feature branch
 
 
 class TaskAssignmentViewSet(viewsets.ModelViewSet):
