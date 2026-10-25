@@ -2,10 +2,6 @@ from django.contrib.auth import get_user_model
 from rest_framework import viewsets
 from rest_framework.permissions import IsAdminUser, AllowAny, IsAuthenticated
 
-# from django_filters.rest_framework import DjangoFilterBackend
-# from rest_framework.filters import SearchFilter, OrderingFilter
-from .filters import TeamFilter
-
 from .models import Project, Task, TaskAssignment, Team, TeamMembership
 from .serializers import (
     ProjectSerializer,
@@ -26,14 +22,10 @@ class UserViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         return User.objects.filter(pk=self.request.user.pk)
     
-
-
+    
 class TeamViewSet(viewsets.ModelViewSet):
     queryset = Team.objects.all()
     serializer_class = TeamSerializer
-    filterset_fields = ['name']
-    ordering_fields = ['name']
-    search_fields = ['name']
 
     def perform_create(self, serializer):
         serializer.save(created_by=self.request.user)
@@ -60,7 +52,7 @@ class TaskViewSet(viewsets.ModelViewSet):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
     # this is main branch edit
-    # this is main branch edit2    # comment for new commit in feature branch
+    # this is main branch edit2
 
 class TeamMembershipViewSet(viewsets.ModelViewSet):
     queryset = TeamMembership.objects.all()
