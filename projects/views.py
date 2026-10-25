@@ -54,6 +54,7 @@ class TaskViewSet(viewsets.ModelViewSet):
     # this is main branch edit
     # this is main branch edit2
     # this is main branch edit3
+    #2 comment for new commit in feature branch
 
 class TeamMembershipViewSet(viewsets.ModelViewSet):
     queryset = TeamMembership.objects.all()
