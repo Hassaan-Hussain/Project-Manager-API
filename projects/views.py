@@ -60,6 +60,7 @@ class TaskViewSet(viewsets.ModelViewSet):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
     # comment for new commit in feature branch
+    #2 comment for new commit in feature branch
 
 class TeamMembershipViewSet(viewsets.ModelViewSet):
     queryset = TeamMembership.objects.all()
